@@ -3,6 +3,7 @@ import { Search, Heart, Sparkles, Lotus } from 'lucide-react'
 import SearchBar from './SearchBar'
 import WelcomeSection from './WelcomeSection'
 import dolenciasData from '../data/dolenciasEjemplo.json'
+import './HomePage.css'
 
 function HomePage({ onNavigate }) {
   const [searchResults, setSearchResults] = useState([])
