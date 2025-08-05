@@ -1,0 +1,47 @@
+.app {
+  text-align: center;
+  padding: 2rem;
+}
+
+.app-header {
+  background-color: #282c34;
+  padding: 2rem;
+  color: white;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.app-header h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.counter button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.counter button:hover {
+  background-color: #21afc7;
+}
+
+.count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 3rem;
+}
