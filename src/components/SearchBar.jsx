@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Search, Loader2 } from 'lucide-react'
 
 function SearchBar({ onSearch, isLoading }) {

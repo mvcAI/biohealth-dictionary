@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Search, Heart, Sparkles, Lotus } from 'lucide-react'
 import SearchBar from './SearchBar'
 import WelcomeSection from './WelcomeSection'
+import { dolenciasService } from '../lib/database.js'
 import dolenciasData from '../data/dolenciasEjemplo.json'
 import './HomePage.css'
 
@@ -9,23 +10,40 @@ function HomePage({ onNavigate }) {
   const [searchResults, setSearchResults] = useState([])
   const [isSearching, setIsSearching] = useState(false)
 
-  const handleSearch = (query) => {
+  const handleSearch = async (query) => {
     if (!query.trim()) {
       setSearchResults([])
       return
     }
 
     setIsSearching(true)
-    
-    // Simular búsqueda en la base de datos
-    setTimeout(() => {
+
+    try {
+      // Intentar buscar en Supabase primero
+      const { data, error } = await dolenciasService.buscar(query)
+
+      if (error) {
+        console.log('Usando datos locales:', error.message)
+        // Si falla Supabase, usar datos locales
+        const results = dolenciasData.filter(dolencia =>
+          dolencia.dolencia.toLowerCase().includes(query.toLowerCase()) ||
+          dolencia.descripcion.toLowerCase().includes(query.toLowerCase())
+        )
+        setSearchResults(results.map(d => ({ ...d, nombre: d.dolencia })))
+      } else {
+        setSearchResults(data)
+      }
+    } catch (err) {
+      console.log('Error de búsqueda, usando datos locales:', err)
+      // Fallback a datos locales
       const results = dolenciasData.filter(dolencia =>
         dolencia.dolencia.toLowerCase().includes(query.toLowerCase()) ||
         dolencia.descripcion.toLowerCase().includes(query.toLowerCase())
       )
-      setSearchResults(results)
+      setSearchResults(results.map(d => ({ ...d, nombre: d.dolencia })))
+    } finally {
       setIsSearching(false)
-    }, 500)
+    }
   }
 
   return (
