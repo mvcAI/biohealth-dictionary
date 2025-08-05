@@ -1,0 +1,27 @@
+[
+  {
+    "dolencia": "Dolor de cabeza",
+    "descripcion": "Conflicto de desvalorización intelectual. Miedo a no estar a la altura intelectualmente. Presión mental excesiva por querer controlar todo.",
+    "categoria": "Sistema nervioso"
+  },
+  {
+    "dolencia": "Asma",
+    "descripcion": "Sensación de asfixia en el territorio. Miedo a tomar su lugar en la vida. Conflicto con la madre o figura materna. Necesidad de espacio vital.",
+    "categoria": "Sistema respiratorio"
+  },
+  {
+    "dolencia": "Gastritis",
+    "descripcion": "Rabia contenida que no se puede expresar. Algo que no se puede 'digerir' emocionalmente. Cólera en el territorio familiar o laboral.",
+    "categoria": "Sistema digestivo"
+  },
+  {
+    "dolencia": "Dolor de espalda",
+    "descripcion": "Sentimiento de no sentirse apoyado por la familia o entorno. Carga excesiva de responsabilidades. Miedo al futuro.",
+    "categoria": "Sistema musculoesquelético"
+  },
+  {
+    "dolencia": "Insomnio",
+    "descripcion": "Culpabilidad por algo que se ha hecho o dejado de hacer. Miedo a perder el control. Hipervigilancia emocional.",
+    "categoria": "Sistema nervioso"
+  }
+]
