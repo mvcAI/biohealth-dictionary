@@ -1,17 +1,24 @@
-import { supabase } from './supabase.js'
+import { supabase, isSupabaseConfigured } from './supabase.js'
 
 // Funciones para trabajar con dolencias
 export const dolenciasService = {
   // Buscar dolencias por nombre o descripción
   async buscar(query) {
     if (!query.trim()) return { data: [], error: null }
-    
+
+    if (!isSupabaseConfigured || !supabase) {
+      return {
+        data: [],
+        error: new Error('Supabase not configured - using local data fallback')
+      }
+    }
+
     const { data, error } = await supabase
       .from('dolencias')
       .select('*')
       .or(`nombre.ilike.%${query}%,descripcion.ilike.%${query}%,palabras_clave.cs.{${query}}`)
       .order('nombre')
-    
+
     return { data: data || [], error }
   },
 
@@ -222,6 +229,13 @@ export const perfilService = {
 export const authService = {
   // Registrar usuario
   async registrar(email, password, datosAdicionales = {}) {
+    if (!isSupabaseConfigured || !supabase) {
+      return {
+        data: null,
+        error: new Error('Supabase authentication not configured')
+      }
+    }
+
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -229,17 +243,24 @@ export const authService = {
         data: datosAdicionales
       }
     })
-    
+
     return { data, error }
   },
 
   // Iniciar sesión
   async iniciarSesion(email, password) {
+    if (!isSupabaseConfigured || !supabase) {
+      return {
+        data: null,
+        error: new Error('Supabase authentication not configured')
+      }
+    }
+
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password
     })
-    
+
     return { data, error }
   },
 
@@ -251,12 +272,27 @@ export const authService = {
 
   // Obtener usuario actual
   async obtenerUsuarioActual() {
+    if (!isSupabaseConfigured || !supabase) {
+      return { user: null, error: new Error('Supabase not configured') }
+    }
+
     const { data: { user }, error } = await supabase.auth.getUser()
     return { user, error }
   },
 
   // Escuchar cambios en la autenticación
   onAuthStateChange(callback) {
+    if (!isSupabaseConfigured || !supabase) {
+      // Return a mock subscription object
+      return {
+        data: {
+          subscription: {
+            unsubscribe: () => {}
+          }
+        }
+      }
+    }
+
     return supabase.auth.onAuthStateChange(callback)
   }
 }
