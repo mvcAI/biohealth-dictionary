@@ -59,6 +59,10 @@ export const dolenciasService = {
 export const progresosService = {
   // Obtener progresos del usuario
   async obtenerProgresos(usuarioId) {
+    if (!isSupabaseConfigured || !supabase) {
+      return { data: [], error: new Error('Supabase not configured') }
+    }
+
     const { data, error } = await supabase
       .from('progresos')
       .select(`
@@ -71,7 +75,7 @@ export const progresosService = {
       `)
       .eq('usuario_id', usuarioId)
       .order('created_at', { ascending: false })
-    
+
     return { data: data || [], error }
   },
 
@@ -111,6 +115,10 @@ export const progresosService = {
 export const dolenciasGuardadasService = {
   // Obtener dolencias guardadas del usuario
   async obtenerGuardadas(usuarioId) {
+    if (!isSupabaseConfigured || !supabase) {
+      return { data: [], error: new Error('Supabase not configured') }
+    }
+
     const { data, error } = await supabase
       .from('dolencias_guardadas')
       .select(`
@@ -124,12 +132,16 @@ export const dolenciasGuardadasService = {
       `)
       .eq('usuario_id', usuarioId)
       .order('created_at', { ascending: false })
-    
+
     return { data: data || [], error }
   },
 
   // Guardar una dolencia
   async guardarDolencia(usuarioId, dolenciaId, notas = '') {
+    if (!isSupabaseConfigured || !supabase) {
+      return { data: null, error: new Error('Supabase not configured') }
+    }
+
     const { data, error } = await supabase
       .from('dolencias_guardadas')
       .insert([{
@@ -138,7 +150,7 @@ export const dolenciasGuardadasService = {
         notas_personales: notas
       }])
       .select()
-    
+
     return { data: data?.[0], error }
   },
 
@@ -266,6 +278,10 @@ export const authService = {
 
   // Cerrar sesión
   async cerrarSesion() {
+    if (!isSupabaseConfigured || !supabase) {
+      return { error: null } // Simulate successful logout in demo mode
+    }
+
     const { error } = await supabase.auth.signOut()
     return { error }
   },
