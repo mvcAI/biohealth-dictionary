@@ -1,4 +1,4 @@
-import { Sparkles, Heart, Lotus } from 'lucide-react'
+import { Sparkles, Heart, Flower2 } from 'lucide-react'
 
 function WelcomeSection() {
   return (
@@ -6,7 +6,7 @@ function WelcomeSection() {
       <div className="welcome-content">
         <div className="logo-container">
           <div className="logo-mandala">
-            <Lotus className="lotus-icon" />
+            <Flower2 className="lotus-icon" />
             <div className="energy-rings">
               <div className="ring ring-1"></div>
               <div className="ring ring-2"></div>

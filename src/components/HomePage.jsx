@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Search, Heart, Sparkles, Lotus } from 'lucide-react'
+import { Search, Heart, Sparkles, Flower2 } from 'lucide-react'
 import SearchBar from './SearchBar'
 import WelcomeSection from './WelcomeSection'
 import { dolenciasService, dolenciasGuardadasService } from '../lib/database.js'
@@ -140,7 +140,7 @@ function HomePage({ onNavigate }) {
             
             <div className="feature-card">
               <div className="feature-icon">
-                <Lotus />
+                <Flower2 />
               </div>
               <h4>Consultas Online</h4>
               <p>Conecta con expertos en biodescodificación</p>
