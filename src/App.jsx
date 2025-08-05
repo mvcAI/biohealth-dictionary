@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext'
 import HomePage from './components/HomePage'
 import Auth from './components/Auth'
 import UserArea from './components/UserArea'
+import ConsultasOnline from './components/ConsultasOnline'
 import Navigation from './components/Navigation'
 import './App.css'
 
@@ -27,6 +28,8 @@ function AppContent() {
         return <Auth onAuthSuccess={() => setCurrentPage('home')} />
       case 'profile':
         return usuario ? <UserArea onNavigate={setCurrentPage} /> : <Auth onAuthSuccess={() => setCurrentPage('profile')} />
+      case 'consultas':
+        return <ConsultasOnline onNavigate={setCurrentPage} />
       default:
         return <HomePage onNavigate={setCurrentPage} />
     }
