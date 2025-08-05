@@ -2,13 +2,16 @@ import { useState, useEffect } from 'react'
 import { Search, Heart, Sparkles, Lotus } from 'lucide-react'
 import SearchBar from './SearchBar'
 import WelcomeSection from './WelcomeSection'
-import { dolenciasService } from '../lib/database.js'
+import { dolenciasService, dolenciasGuardadasService } from '../lib/database.js'
+import { useAuth } from '../contexts/AuthContext'
 import dolenciasData from '../data/dolenciasEjemplo.json'
 import './HomePage.css'
 
 function HomePage({ onNavigate }) {
+  const { usuario, estaAutenticado } = useAuth()
   const [searchResults, setSearchResults] = useState([])
   const [isSearching, setIsSearching] = useState(false)
+  const [guardandoDolencia, setGuardandoDolencia] = useState(null)
 
   const handleSearch = async (query) => {
     if (!query.trim()) {
@@ -46,6 +49,28 @@ function HomePage({ onNavigate }) {
     }
   }
 
+  const guardarDolencia = async (dolencia) => {
+    if (!estaAutenticado) {
+      onNavigate('auth')
+      return
+    }
+
+    setGuardandoDolencia(dolencia.id || dolencia.dolencia)
+
+    try {
+      const dolenciaId = dolencia.id || dolencia.dolencia // Para compatibilidad con datos locales
+      await dolenciasGuardadasService.guardarDolencia(usuario.id, dolenciaId)
+
+      // Mostrar mensaje de éxito (podrías agregar un toast aquí)
+      console.log('Dolencia guardada exitosamente')
+    } catch (error) {
+      console.error('Error guardando dolencia:', error)
+      // Manejar error (podrías mostrar un mensaje de error)
+    } finally {
+      setGuardandoDolencia(null)
+    }
+  }
+
   return (
     <div className="home-page">
       <WelcomeSection />
@@ -74,9 +99,18 @@ function HomePage({ onNavigate }) {
                   </div>
                   <p className="result-description">{resultado.descripcion}</p>
                   <div className="result-actions">
-                    <button className="save-btn">
+                    <button
+                      className="save-btn"
+                      onClick={() => guardarDolencia(resultado)}
+                      disabled={guardandoDolencia === (resultado.id || resultado.dolencia)}
+                    >
                       <Heart size={16} />
-                      Guardar en mi progreso
+                      {guardandoDolencia === (resultado.id || resultado.dolencia)
+                        ? 'Guardando...'
+                        : estaAutenticado
+                          ? 'Guardar en mi progreso'
+                          : 'Iniciar sesión para guardar'
+                      }
                     </button>
                   </div>
                 </div>
