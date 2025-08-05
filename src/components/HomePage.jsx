@@ -69,7 +69,7 @@ function HomePage({ onNavigate }) {
               {searchResults.map((resultado, index) => (
                 <div key={index} className="result-card fade-in">
                   <div className="result-header">
-                    <h4>{resultado.dolencia}</h4>
+                    <h4>{resultado.nombre || resultado.dolencia}</h4>
                     <span className="category-tag">{resultado.categoria}</span>
                   </div>
                   <p className="result-description">{resultado.descripcion}</p>
