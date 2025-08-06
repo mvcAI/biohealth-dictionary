@@ -388,6 +388,20 @@
   box-shadow: var(--shadow-medium);
 }
 
+.feature-card.clickable {
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.feature-card.clickable:hover {
+  border-color: var(--color-primary);
+  background: rgba(124, 58, 237, 0.02);
+}
+
+.feature-card.clickable:active {
+  transform: translateY(-4px);
+}
+
 .feature-icon {
   width: 60px;
   height: 60px;
