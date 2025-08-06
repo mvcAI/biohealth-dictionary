@@ -123,23 +123,48 @@ function HomePage({ onNavigate }) {
         <div className="features-section">
           <h3>Tu camino hacia la sanación integral</h3>
           <div className="features-grid">
-            <div className="feature-card">
+            <div
+              className="feature-card clickable"
+              onClick={() => {
+                document.querySelector('.search-section')?.scrollIntoView({
+                  behavior: 'smooth'
+                })
+              }}
+            >
               <div className="feature-icon">
                 <Search />
               </div>
               <h4>Búsqueda Instantánea</h4>
               <p>Encuentra el significado emocional de cualquier dolencia física</p>
             </div>
-            
-            <div className="feature-card">
+
+            <div
+              className="feature-card clickable"
+              onClick={() => {
+                if (estaAutenticado) {
+                  onNavigate('profile')
+                } else {
+                  onNavigate('auth')
+                }
+              }}
+            >
               <div className="feature-icon">
                 <Heart />
               </div>
               <h4>Progreso Personal</h4>
               <p>Registra tu evolución emocional y sanación interior</p>
             </div>
-            
-            <div className="feature-card">
+
+            <div
+              className="feature-card clickable"
+              onClick={() => {
+                if (estaAutenticado) {
+                  onNavigate('consultas')
+                } else {
+                  onNavigate('auth')
+                }
+              }}
+            >
               <div className="feature-icon">
                 <Flower2 />
               </div>
