@@ -7,9 +7,9 @@
   --color-accent: #f59e0b; /* Dorado sagrado */
   --color-background: #fafaf9; /* Blanco cálido */
   --color-surface: #ffffff;
-  --color-text-primary: #374151;
-  --color-text-secondary: #6b7280;
-  --color-text-muted: #9ca3af;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #6b7280;
   
   /* Gradientes espirituales */
   --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #10b981 100%);
