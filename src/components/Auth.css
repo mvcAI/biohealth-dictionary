@@ -182,7 +182,7 @@
 
 .input-container input {
   width: 100%;
-  padding: 16px 18px 16px 52px;
+  padding: 16px 18px;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   font-size: 1.25rem;
@@ -193,6 +193,11 @@
   letter-spacing: 0.5px;
   line-height: 1.4;
   font-family: var(--font-primary);
+}
+
+/* Inputs con iconos mantienen el padding izquierdo */
+.input-container:has(.input-icon) input {
+  padding-left: 52px;
 }
 
 .input-container input:focus {
