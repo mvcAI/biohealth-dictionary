@@ -226,6 +226,19 @@
   font-weight: 700 !important;
 }
 
+/* Asegurar contraste en diferentes condiciones */
+@media (prefers-color-scheme: dark) {
+  .input-container input {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border-color: #d1d5db;
+  }
+
+  .form-group label {
+    color: #111827 !important;
+  }
+}
+
 .input-container input:disabled {
   background: #f9fafb;
   cursor: not-allowed;
