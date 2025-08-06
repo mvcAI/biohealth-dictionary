@@ -3,6 +3,7 @@ import { Search, Heart, Sparkles, Flower2 } from 'lucide-react'
 import SearchBar from './SearchBar'
 import WelcomeSection from './WelcomeSection'
 import { dolenciasService, dolenciasGuardadasService } from '../lib/database.js'
+import { isSupabaseConfigured } from '../lib/supabase.js'
 import { useAuth } from '../contexts/AuthContext'
 import dolenciasData from '../data/dolenciasEjemplo.json'
 import './HomePage.css'
@@ -74,7 +75,17 @@ function HomePage({ onNavigate }) {
   return (
     <div className="home-page">
       <WelcomeSection />
-      
+
+      {!isSupabaseConfigured && (
+        <div className="demo-notice">
+          <p>
+            🔧 <strong>Modo Demo:</strong> Supabase no configurado.
+            La aplicación funciona con datos locales.
+            <a href="/SUPABASE_SETUP.md" target="_blank">Ver instrucciones de configuración</a>
+          </p>
+        </div>
+      )}
+
       <main className="main-content">
         <div className="search-section">
           <div className="search-header">

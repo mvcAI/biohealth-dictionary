@@ -2,6 +2,26 @@
   min-height: 100vh;
 }
 
+.demo-notice {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.demo-notice a {
+  color: #92400e;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.demo-notice a:hover {
+  color: #78350f;
+}
+
 /* Sección de bienvenida */
 .welcome-section {
   background: var(--gradient-soft);
