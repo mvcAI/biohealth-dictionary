@@ -171,30 +171,35 @@
 
 .input-icon {
   position: absolute;
-  left: 16px;
-  width: 18px;
-  height: 18px;
-  color: var(--color-text-muted);
+  left: 18px;
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
   z-index: 2;
+  opacity: 0.8;
 }
 
 .input-container input {
   width: 100%;
-  padding: 14px 16px 14px 48px;
+  padding: 16px 18px 16px 52px;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 600;
   transition: all 0.3s ease;
   background: var(--color-surface);
-  color: var(--color-text-primary);
-  letter-spacing: 0.3px;
+  color: #1f2937;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  font-family: var(--font-primary);
 }
 
 .input-container input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
+  color: #111827;
+  font-weight: 700;
 }
 
 .input-container input:focus + .input-icon,
@@ -209,14 +214,15 @@
 
 .password-toggle {
   position: absolute;
-  right: 16px;
+  right: 18px;
   background: none;
   border: none;
-  padding: 4px;
+  padding: 6px;
   cursor: pointer;
-  color: var(--color-text-muted);
+  color: var(--color-primary);
   transition: color 0.3s ease;
   z-index: 2;
+  opacity: 0.7;
 }
 
 .password-toggle:hover {
