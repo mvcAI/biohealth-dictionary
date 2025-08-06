@@ -1,0 +1,182 @@
+[
+  {
+    "nombre": "Dolor de cabeza",
+    "descripcion": "Conflicto de desvalorización intelectual. Miedo a no estar a la altura intelectualmente. Presión mental excesiva por querer controlar todo. La cabeza representa nuestro yo consciente y el control.",
+    "categoria": "Sistema nervioso",
+    "palabras_clave": ["cabeza", "migraña", "cefalea", "tensión", "estrés", "control", "intelectual"]
+  },
+  {
+    "nombre": "Asma",
+    "descripcion": "Sensación de asfixia en el territorio. Miedo a tomar su lugar en la vida. Conflicto con la madre o figura materna. Necesidad de espacio vital. Dificultad para expresar emociones.",
+    "categoria": "Sistema respiratorio",
+    "palabras_clave": ["respiración", "ahogo", "bronquios", "pulmones", "aire", "territorio", "madre"]
+  },
+  {
+    "nombre": "Gastritis",
+    "descripcion": "Rabia contenida que no se puede expresar. Algo que no se puede 'digerir' emocionalmente. Cólera en el territorio familiar o laboral. Injusticia no asimilada.",
+    "categoria": "Sistema digestivo",
+    "palabras_clave": ["estómago", "acidez", "digestión", "rabia", "injusticia", "cólera"]
+  },
+  {
+    "nombre": "Dolor de espalda",
+    "descripcion": "Sentimiento de no sentirse apoyado por la familia o entorno. Carga excesiva de responsabilidades. Miedo al futuro. Desvalorización de uno mismo.",
+    "categoria": "Sistema musculoesquelético",
+    "palabras_clave": ["espalda", "columna", "apoyo", "responsabilidad", "carga", "futuro"]
+  },
+  {
+    "nombre": "Insomnio",
+    "descripcion": "Culpabilidad por algo que se ha hecho o dejado de hacer. Miedo a perder el control. Hipervigilancia emocional. Necesidad de estar alerta ante el peligro.",
+    "categoria": "Sistema nervioso",
+    "palabras_clave": ["sueño", "dormir", "descanso", "vigilia", "control", "culpa"]
+  },
+  {
+    "nombre": "Artritis",
+    "descripcion": "Rigidez mental y emocional. Crítica constante hacia uno mismo y hacia otros. Sensación de ser víctima. Resentimiento acumulado. Falta de flexibilidad ante los cambios.",
+    "categoria": "Sistema musculoesquelético",
+    "palabras_clave": ["articulaciones", "rigidez", "flexibilidad", "crítica", "resentimiento", "víctima"]
+  },
+  {
+    "nombre": "Hipertensión",
+    "descripcion": "Tensión emocional acumulada. Problemas no resueltos del pasado. Necesidad de control excesivo. Miedo a enfrentar conflictos. Presión por cumplir expectativas.",
+    "categoria": "Sistema cardiovascular",
+    "palabras_clave": ["presión", "tensión", "corazón", "control", "expectativas", "conflictos"]
+  },
+  {
+    "nombre": "Depresión",
+    "descripcion": "Cólera dirigida hacia uno mismo. Sentimiento de desesperanza. Pérdida de la razón de vivir. Separación de algo o alguien querido. Desconexión del propósito de vida.",
+    "categoria": "Sistema emocional",
+    "palabras_clave": ["tristeza", "desesperanza", "pérdida", "propósito", "separación", "cólera"]
+  },
+  {
+    "nombre": "Ansiedad",
+    "descripcion": "Miedo al futuro y a lo desconocido. Pérdida de control sobre las circunstancias. Anticipación de peligros imaginarios. Necesidad de control y seguridad.",
+    "categoria": "Sistema emocional",
+    "palabras_clave": ["miedo", "futuro", "control", "seguridad", "nervios", "peligro"]
+  },
+  {
+    "nombre": "Diabetes",
+    "descripcion": "Tristeza profunda por no poder disfrutar de la dulzura de la vida. Necesidad de control sobre el entorno. Resistencia a recibir amor. Amargura acumulada.",
+    "categoria": "Sistema endocrino",
+    "palabras_clave": ["azúcar", "dulzura", "control", "amargura", "resistencia", "amor"]
+  },
+  {
+    "nombre": "Dolor de rodillas",
+    "descripcion": "Miedo a avanzar en la vida. Rigidez ante los cambios. Problemas de humildad y orgullo. Dificultad para 'doblegarse' ante las circunstancias. Conflicto con la autoridad.",
+    "categoria": "Sistema musculoesquelético",
+    "palabras_clave": ["rodillas", "avanzar", "humildad", "orgullo", "flexibilidad", "autoridad"]
+  },
+  {
+    "nombre": "Dolor de garganta",
+    "descripcion": "Dificultad para expresar lo que se siente. Palabras que no se pueden decir. Rabia contenida. Miedo al juicio de otros. Conflicto entre lo que se piensa y lo que se dice.",
+    "categoria": "Sistema respiratorio",
+    "palabras_clave": ["garganta", "expresar", "palabras", "comunicación", "juicio", "silencio"]
+  },
+  {
+    "nombre": "Cistitis",
+    "descripcion": "Conflicto de territorio. Enfado con la pareja. Marcaje del territorio emocional. Dificultades en las relaciones íntimas. Miedo a ser invadido emocionalmente.",
+    "categoria": "Sistema urinario",
+    "palabras_clave": ["cistitis", "territorio", "pareja", "intimidad", "invasión", "enfado"]
+  },
+  {
+    "nombre": "Sinusitis",
+    "descripcion": "Conflicto de olfato social. No soportar a alguien cercano. Situación que 'no se puede oler'. Irritación por la presencia de alguien. Rechazo a algo del entorno.",
+    "categoria": "Sistema respiratorio",
+    "palabras_clave": ["sinusitis", "olfato", "rechazo", "irritación", "presencia", "entorno"]
+  },
+  {
+    "nombre": "Eczema",
+    "descripcion": "Conflicto de separación. Pérdida de contacto con un ser querido. Necesidad de protección. Miedo al contacto físico o emocional. Separación dolorosa no resuelta.",
+    "categoria": "Piel",
+    "palabras_clave": ["eczema", "separación", "contacto", "protección", "pérdida", "piel"]
+  },
+  {
+    "nombre": "Dolor de hombros",
+    "descripcion": "Carga excesiva de responsabilidades. Sensación de llevar el peso del mundo. Dificultad para delegar. Falta de apoyo. Cargar con los problemas de otros.",
+    "categoria": "Sistema musculoesquelético",
+    "palabras_clave": ["hombros", "responsabilidad", "carga", "peso", "delegar", "apoyo"]
+  },
+  {
+    "nombre": "Otitis",
+    "descripcion": "Conflicto de no querer escuchar algo. Rabia por lo que se está oyendo. Información que molesta. Conflicto auditivo en el territorio. Rechazo a ciertas palabras o sonidos.",
+    "categoria": "Oídos",
+    "palabras_clave": ["otitis", "escuchar", "rabia", "sonidos", "información", "rechazo"]
+  },
+  {
+    "nombre": "Conjuntivitis",
+    "descripcion": "Conflicto de no querer ver algo. Situación visual molesta. Rechazo a lo que se está viendo. Cólera por algo que está frente a los ojos. Negación de la realidad.",
+    "categoria": "Ojos",
+    "palabras_clave": ["conjuntivitis", "ver", "visual", "cólera", "negación", "realidad"]
+  },
+  {
+    "nombre": "Herpes labial",
+    "descripcion": "Conflicto de beso no deseado o deseado pero no dado. Rechazo o deseo sexual reprimido. Conflicto entre lo que se quiere expresar y lo que está prohibido.",
+    "categoria": "Piel",
+    "palabras_clave": ["herpes", "beso", "rechazo", "deseo", "prohibido", "expresión"]
+  },
+  {
+    "nombre": "Colon irritable",
+    "descripcion": "Conflicto de guarrería o algo asqueroso que no se puede eliminar. Situación que molesta profundamente. Incapacidad para procesar y eliminar experiencias negativas.",
+    "categoria": "Sistema digestivo",
+    "palabras_clave": ["colon", "irritable", "eliminar", "guarrería", "procesar", "negativo"]
+  },
+  {
+    "nombre": "Fibromialgia",
+    "descripcion": "Conflicto de desvalorización extrema. Sentirse inútil e incapaz. Dolor emocional profundo que se somatiza en todo el cuerpo. Falta de reconocimiento y amor propio.",
+    "categoria": "Sistema musculoesquelético",
+    "palabras_clave": ["fibromialgia", "desvalorización", "inútil", "dolor", "reconocimiento", "amor"]
+  },
+  {
+    "nombre": "Cálculos renales",
+    "descripcion": "Conflicto de líquido. Situaciones que se cristalizan y endurecen. Emociones que se 'petrifican'. Dificultad para fluir con la vida. Rigidez emocional.",
+    "categoria": "Sistema urinario",
+    "palabras_clave": ["cálculos", "renales", "cristalizar", "fluir", "rigidez", "emocional"]
+  },
+  {
+    "nombre": "Alopecia",
+    "descripcion": "Conflicto de separación brutal del grupo. Pérdida de protección. Sensación de estar desprotegido. Separación traumática de la familia o clan. Pérdida de identidad.",
+    "categoria": "Piel",
+    "palabras_clave": ["alopecia", "separación", "protección", "desprotegido", "familia", "identidad"]
+  },
+  {
+    "nombre": "Vértigo",
+    "descripcion": "Conflicto de caída. Miedo a perder el control. Sensación de que la vida se tambalea. Conflicto entre lo que se quiere y lo que se debe hacer. Pérdida de referencias.",
+    "categoria": "Oídos",
+    "palabras_clave": ["vértigo", "caída", "control", "tambalea", "referencias", "equilibrio"]
+  },
+  {
+    "nombre": "Hipotiroidismo",
+    "descripcion": "Conflicto de tiempo y urgencia. Sensación de no llegar a tiempo. Desesperación por no poder alcanzar algo. Ralentización forzada para evitar el fracaso.",
+    "categoria": "Sistema endocrino",
+    "palabras_clave": ["hipotiroidismo", "tiempo", "urgencia", "desesperación", "ralentización", "fracaso"]
+  },
+  {
+    "nombre": "Cáncer de mama",
+    "descripcion": "Conflicto en el nido. Preocupación extrema por un hijo o ser querido. Sobreprotección. Conflicto de dar y recibir nutrición emocional. Drama en el hogar.",
+    "categoria": "Sistema reproductivo",
+    "palabras_clave": ["mama", "nido", "hijo", "sobreprotección", "nutrición", "hogar"]
+  },
+  {
+    "nombre": "Hemorroides",
+    "descripcion": "Conflicto de identidad en el territorio. No saber cuál es su lugar. Conflicto con la autoridad del territorio. Presión por mantenerse en una posición.",
+    "categoria": "Sistema digestivo",
+    "palabras_clave": ["hemorroides", "identidad", "territorio", "lugar", "autoridad", "posición"]
+  },
+  {
+    "nombre": "Lumbalgia",
+    "descripcion": "Conflicto de desvalorización en el movimiento. Miedo a avanzar. Falta de flexibilidad ante los cambios. Rigidez mental que se refleja en la espalda baja.",
+    "categoria": "Sistema musculoesquelético",
+    "palabras_clave": ["lumbalgia", "movimiento", "avanzar", "flexibilidad", "cambios", "rigidez"]
+  },
+  {
+    "nombre": "Acné",
+    "descripcion": "Conflicto de imagen y aceptación. Rechazo a la propia imagen. Conflicto de seducción y atractivo. Miedo al juicio de otros sobre la apariencia física.",
+    "categoria": "Piel",
+    "palabras_clave": ["acné", "imagen", "aceptación", "seducción", "atractivo", "apariencia"]
+  },
+  {
+    "nombre": "Tinnitus",
+    "descripcion": "Conflicto auditivo interno. Necesidad obsesiva de escuchar algo. Ruido mental constante. Dificultad para encontrar silencio interior. Hipervigilancia auditiva.",
+    "categoria": "Oídos",
+    "palabras_clave": ["tinnitus", "auditivo", "ruido", "silencio", "hipervigilancia", "interno"]
+  }
+]
