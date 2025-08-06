@@ -167,8 +167,7 @@ function Auth({ onAuthSuccess }) {
             <div className="form-group">
               <label htmlFor="nombreCompleto">Nombre completo</label>
               <div className="input-container">
-                <User className="input-icon" />
-                <input
+              <input
                   type="text"
                   id="nombreCompleto"
                   name="nombreCompleto"
@@ -225,10 +224,9 @@ function Auth({ onAuthSuccess }) {
             <div className="form-group">
               <label htmlFor="confirmPassword">Confirmar contraseña</label>
               <div className="input-container">
-                <Lock className="input-icon" />
-                <input
-                  type={mostrarPassword ? 'text' : 'password'}
-                  id="confirmPassword"
+              <input
+                type={mostrarPassword ? 'text' : 'password'}
+                id="confirmPassword"
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleInputChange}
