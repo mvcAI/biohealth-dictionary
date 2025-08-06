@@ -425,6 +425,34 @@
   line-height: 1.6;
 }
 
+/* Sin resultados */
+.no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--color-surface);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid #f59e0b;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.no-results p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.no-results p:first-child {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.no-results p:last-child {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .main-title {
