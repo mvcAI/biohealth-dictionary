@@ -130,7 +130,7 @@ function Auth({ onAuthSuccess }) {
     <div className="auth-container">
       <div className="auth-background">
         <div className="floating-elements">
-          <Sparkles className="floating-icon icon-1" />
+          <Sparkles className="floating-icon icon-1" style={{ left: '874px', top: '856px' }} />
           <Heart className="floating-icon icon-2" />
           <Sparkles className="floating-icon icon-3" />
         </div>
