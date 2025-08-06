@@ -76,15 +76,6 @@ function HomePage({ onNavigate }) {
     <div className="home-page">
       <WelcomeSection />
 
-      {!isSupabaseConfigured && (
-        <div className="demo-notice">
-          <p>
-            🔧 <strong>Modo Demo:</strong> Supabase no configurado.
-            La aplicación funciona con datos locales.
-            <a href="/SUPABASE_SETUP.md" target="_blank">Ver instrucciones de configuración</a>
-          </p>
-        </div>
-      )}
 
       <main className="main-content">
         <div className="search-section">
