@@ -214,6 +214,17 @@
   opacity: 1;
 }
 
+.input-container input:not(:placeholder-shown) {
+  color: #111827;
+  font-weight: 700;
+}
+
+.input-container input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--color-surface) inset !important;
+  -webkit-text-fill-color: #111827 !important;
+  font-weight: 700 !important;
+}
+
 .input-container input:disabled {
   background: #f9fafb;
   cursor: not-allowed;
