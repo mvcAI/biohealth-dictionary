@@ -1,6 +1,6 @@
 import { Sparkles, Heart, Flower2 } from 'lucide-react'
 
-function WelcomeSection() {
+function WelcomeSection({ onNavigate }) {
   return (
     <header className="welcome-section">
       <div className="welcome-content">
@@ -28,11 +28,21 @@ function WelcomeSection() {
             del autoconocimiento y la sanación emocional
           </p>
           <div className="cta-buttons">
-            <button className="cta-primary">
+            <button
+              className="cta-primary"
+              onClick={() => onNavigate && onNavigate('auth')}
+            >
               <Heart size={18} />
               Comenzar mi sanación
             </button>
-            <button className="cta-secondary">
+            <button
+              className="cta-secondary"
+              onClick={() => {
+                document.querySelector('.search-section')?.scrollIntoView({
+                  behavior: 'smooth'
+                })
+              }}
+            >
               Saber más
             </button>
           </div>
