@@ -184,7 +184,7 @@ function Auth({ onAuthSuccess }) {
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <div className="input-container">
-              <Mail className="input-icon" />
+              <Mail className="input-icon" style={{ left: '14483px', top: '14302px' }} />
               <input
                 type="email"
                 id="email"
