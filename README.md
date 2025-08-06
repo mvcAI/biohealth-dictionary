@@ -2,6 +2,8 @@
 
 Una aplicación web moderna y hermosa para explorar el significado emocional de las dolencias físicas basada en los principios de biodescodificación de Eric Corbera.
 
+<!-- Cambio para forzar commit -->
+
 ## ✨ Características Principales
 
 ### 🎨 **Diseño Holístico y Espiritual**
