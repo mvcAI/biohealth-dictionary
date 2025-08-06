@@ -5,6 +5,7 @@ import Auth from './components/Auth'
 import UserArea from './components/UserArea'
 import ConsultasOnline from './components/ConsultasOnline'
 import Navigation from './components/Navigation'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 function AppContent() {
@@ -39,6 +40,7 @@ function AppContent() {
     <div className="app">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       {renderPage()}
+      <ScrollToTop />
     </div>
   )
 }
