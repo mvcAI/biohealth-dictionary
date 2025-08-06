@@ -200,7 +200,7 @@ function Auth({ onAuthSuccess }) {
           <div className="form-group">
             <label htmlFor="password">Contraseña</label>
             <div className="input-container">
-              <Lock className="input-icon" />
+              <Lock className="input-icon" style={{ left: '13371px', top: '8533px' }} />
               <input
                 type={mostrarPassword ? 'text' : 'password'}
                 id="password"
