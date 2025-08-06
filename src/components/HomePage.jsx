@@ -13,8 +13,11 @@ function HomePage({ onNavigate }) {
   const [searchResults, setSearchResults] = useState([])
   const [isSearching, setIsSearching] = useState(false)
   const [guardandoDolencia, setGuardandoDolencia] = useState(null)
+  const [currentQuery, setCurrentQuery] = useState('')
 
   const handleSearch = async (query) => {
+    setCurrentQuery(query)
+
     if (!query.trim()) {
       setSearchResults([])
       return
@@ -89,9 +92,9 @@ function HomePage({ onNavigate }) {
           
           <SearchBar onSearch={handleSearch} isLoading={isSearching} />
           
-          {searchResults.length > 0 && (
+          {searchResults.length > 0 ? (
             <div className="search-results">
-              <h3>Resultados de tu búsqueda</h3>
+              <h3>Resultados de tu búsqueda ({searchResults.length})</h3>
               {searchResults.map((resultado, index) => (
                 <div key={index} className="result-card fade-in">
                   <div className="result-header">
@@ -117,6 +120,13 @@ function HomePage({ onNavigate }) {
                 </div>
               ))}
             </div>
+          ) : (
+            currentQuery && !isSearching && (
+              <div className="no-results">
+                <p>No se encontraron dolencias para "<strong>{currentQuery}</strong>"</p>
+                <p>Intenta con términos como: dolor, miedo, ansiedad, control, separación</p>
+              </div>
+            )
           )}
         </div>
 
