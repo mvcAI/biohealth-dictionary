@@ -74,8 +74,7 @@ function HomePage({ onNavigate }) {
 
   return (
     <div className="home-page">
-      <WelcomeSection />
-
+      <WelcomeSection onNavigate={onNavigate} />
 
       <main className="main-content">
         <div className="search-section">
