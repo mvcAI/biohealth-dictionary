@@ -28,7 +28,7 @@ function SearchBar({ onSearch, isLoading }) {
           type="text"
           value={query}
           onChange={handleChange}
-          placeholder="Busca una dolencia... ej: dolor de cabeza, asma, gastritis"
+          placeholder="Busca una dolencia o síntoma... ej: dolor de cabeza, miedo, control"
           className="search-input"
           disabled={isLoading}
         />
