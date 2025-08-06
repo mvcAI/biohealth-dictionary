@@ -263,6 +263,7 @@
   height: 20px;
   color: var(--color-primary);
   animation: spin 1s linear infinite;
+  filter: drop-shadow(0 0 2px rgba(124, 58, 237, 0.3));
 }
 
 @keyframes spin {
@@ -273,7 +274,9 @@
 .search-button {
   padding: 16px 24px;
   font-size: 1rem;
+  font-weight: 600;
   white-space: nowrap;
+  letter-spacing: 0.3px;
 }
 
 /* Resultados de búsqueda */
